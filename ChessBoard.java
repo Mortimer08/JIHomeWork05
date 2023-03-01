@@ -1,3 +1,5 @@
+
+
 public class ChessBoard {
     public int[][] field = new int[8][8];
 
@@ -12,14 +14,11 @@ public class ChessBoard {
                         sign = " ";
                         break;
                     case 1:
-                        sign = "+";
+                        sign = " ";
                         break;
                     case 2:
                         sign = "M";
                         break;
-                    // default:
-                    // sign = "M";
-                    // break;
                 }
                 System.out.printf("| %s ", sign);
 
@@ -63,10 +62,27 @@ public class ChessBoard {
             add++;
         }
         for (int i = 0; i < field[column].length; i++) {
-            if(i != column){
-                field[line][i]=1;
+            if (i != column) {
+                field[line][i] = 1;
             }
         }
 
+    }
+
+    public boolean isOcupated(Integer line, Integer column) {
+        if (field[line][column] == 1 || field[line][column] == 2) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    void clearBoard() {
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                field[i][j]=0;
+            }
+        }
     }
 }
