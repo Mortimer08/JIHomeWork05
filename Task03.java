@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 /*
@@ -8,7 +7,7 @@ import java.util.Random;
 public class Task03 {
     public static void main(String[] args) {
         ArrayList<Integer> myArrayList = new ArrayList<>();
-        arrayListRndFill(myArrayList, 20);
+        arrayListRndFill(myArrayList, 30);
         MyHeapSorter mhs = new MyHeapSorter();
         System.out.println("Исходный массив:");
         System.out.println(myArrayList.toString());
